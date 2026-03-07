@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.1.0  # ここを固定
+      revision: v3.5  # ここを明示的に指定して、中途半端な最新版を避けます
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: kumamuk-git
