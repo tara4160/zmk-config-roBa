@@ -57,8 +57,9 @@
         // [FIX] bootloader をコンボ（3キー同時押し）でのみ発火するよう保護
         bootloader_combo {
             bindings = <&bootloader>;
-            key-positions = <0 1 2>;  // 左上3キー同時押しで発火
-            layers = <6>;             // layer_6 上でのみ有効
+            key-positions = <0 1 2>;
+            timeout-ms = <50>;
+            layers = <6>;
         };
     };
 
