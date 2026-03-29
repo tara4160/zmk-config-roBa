@@ -54,7 +54,7 @@
         for_macOS {
             bindings = <
 &kp Q             &kp W         &kp E             &kp R                 &kp T                                                                &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D             &kp F                 &kp G            &kp LS(LG(S))                &kp LEFT_PARENTHESIS   &kp H        &kp J  &kp K      &kp L    &lt 6 SEMICOLON
+&kp A             &kp S         &kp D             &kp F                 &kp G            &kp LS(LG(S))                &kp LEFT_PARENTHESIS   &kp H        &kp J  &kp K      &lt 7 L  &lt 6 SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                 &kp B            &kp COLON                    &kp RIGHT_PARENTHESIS  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE            &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
@@ -133,6 +133,15 @@
 &trans  &trans  &trans  &trans        &trans           &trans                 &trans  &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans        &trans           &trans                 &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans  &trans  &kp CAPSLOCK  &kp LOCKING_NUM  &kp LG(LC(LA(P)))      &trans  &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
