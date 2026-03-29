@@ -152,10 +152,10 @@
 
         BT_setting {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                          &sel_mac  &sel_ipad  &sel_win  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans        &trans           &trans                 &trans  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans        &trans           &trans                 &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &kp CAPSLOCK  &kp LOCKING_NUM  &kp LG(LC(LA(P)))      &trans  &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans        &trans                                  &sel_mac  &sel_ipad  &sel_win  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans        &trans           &trans                 &trans    &trans     &trans    &trans        &trans        &trans
+&trans  &trans  &trans  &trans        &trans           &trans                 &trans    &trans     &trans    &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &kp CAPSLOCK  &kp LOCKING_NUM  &kp LG(LC(LA(P)))      &trans    &trans                                           &bt BT_CLR_ALL
             >;
         };
     };
