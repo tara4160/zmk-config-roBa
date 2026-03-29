@@ -107,7 +107,7 @@
             >;
         };
 
-        FUNCTION {
+        Function_Symbles {
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                      &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
 &trans            &trans            &trans            &trans            &trans      &trans      &trans  &trans            &trans      &trans      &trans            &trans
@@ -127,10 +127,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&trans  &trans          &kp UP_ARROW    &trans           &trans                                 &trans  &trans    &kp UP_ARROW    &trans           &trans
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &trans             &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans          &trans          &trans           &trans  &trans      &trans             &trans  &trans    &trans          &trans           &trans
+&trans  &trans          &trans          &trans           &trans  &trans      &kp LC(RIGHT_ALT)  &trans                                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
