@@ -35,24 +35,10 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
         // Mac用: プロファイル0を選択し、レイヤー0(for_macOS)へ
-        sel_mac: sel_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&to 0>;
-        };
         // iPad用: プロファイル1を選択し、レイヤー1(for_iPadOS)へ
-        sel_ipad: sel_ipad {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&to 1>;
-        };
         // Windows用: プロファイル2を選択し、レイヤー2(for_Windows)へ
-        sel_win: sel_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&to 2>;
-        };
     };
 
     behaviors {
@@ -129,10 +115,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                              &trans        &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans        &mkp MB1  &mkp MB2  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_DOWN  &msc SCRL_UP  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4        &mkp MB5                                  &trans
+&trans  &trans  &trans  &trans  &trans                        &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB1  &mkp MB2  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5                              &trans
             >;
         };
 
