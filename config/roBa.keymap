@@ -135,14 +135,5 @@
 &trans  &trans  &trans  &kp CAPSLOCK  &kp LOCKING_NUM  &kp LG(LC(LA(P)))      &trans  &trans                                                  &bt BT_CLR_ALL
             >;
         };
-
-        layer_9 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
     };
 };
