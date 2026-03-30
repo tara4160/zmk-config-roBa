@@ -12,12 +12,6 @@
     automouse-layer = <6>;
     scroll-layers = <7>;
 
-    /* 反転設定（invert-xxx）はすべて削除し、以下を追記してください */
-    /* このドライバーが持っている数少ない設定項目です */
-    scroll-hz = <100>;       // スクロールの更新頻度
-    vscroll-divisor = <(-2)>; // 垂直スクロールの感度（負の値で反転）
-    hscroll-divisor = <2>;    // 水平スクロールの感度（必要ならここも負に）
-
     // arrows {
     //     layers = <5>;
     //     bindings =
