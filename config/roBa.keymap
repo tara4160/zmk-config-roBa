@@ -12,6 +12,9 @@
     automouse-layer = <6>;
     scroll-layers = <7>;
 
+    /* ここに以下の行を追加します */
+    invert-y;  // 上下のスクロールを反転
+
     // arrows {
     //     layers = <5>;
     //     bindings =
