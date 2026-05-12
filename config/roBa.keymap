@@ -52,11 +52,11 @@
             tapping-term-ms = <200>;
         };
 
-        /* マウスホイール用の挙動定義を追加 */
+        /* 修正箇所: #sensor-binding-cells を 0 に変更し、引数を内部で固定 */
         hw_sc: hw_sc {
             compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             tap-ms = <20>;
         };
     };
@@ -72,8 +72,8 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
 
-            /* 定義した hw_sc を使用 */
-            sensor-bindings = <&hw_sc SCRL_DOWN SCRL_UP>;
+            /* 引数なしで呼び出し */
+            sensor-bindings = <&hw_sc>;
         };
 
         for_iPadOS {
@@ -120,14 +120,14 @@
 &trans  &trans          &trans          &trans           &trans  &trans      &kp LA(RIGHT_CONTROL)  &kp RET                                             &trans
             >;
 
-            sensor-bindings = <&hw_sc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&hw_sc>;
         };
 
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                        &trans    &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB1  &mkp MB2  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans                                &trans
             >;
         };
