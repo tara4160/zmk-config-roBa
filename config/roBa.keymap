@@ -79,7 +79,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DN>;
+            sensor-bindings = <&inc_dec_kp SCROLL_UP SCROLL_DOWN>;
         };
 
         for_iPadOS {
@@ -90,7 +90,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DN>;
+            sensor-bindings = <&inc_dec_kp SCROLL_UP SCROLL_DOWN>;
         };
 
         for_Windows {
@@ -101,7 +101,7 @@
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt LEFT_CONTROL MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DN>;
+            sensor-bindings = <&inc_dec_kp SCROLL_UP SCROLL_DOWN>;
         };
 
         Function_Symbol {
@@ -130,7 +130,7 @@
 &trans  &trans          &trans          &trans           &trans  &trans      &kp LA(RIGHT_CONTROL)  &kp RET                                             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DN>;
+            sensor-bindings = <&inc_dec_kp SCROLL_UP SCROLL_DOWN>;
         };
 
         MOUSE {
