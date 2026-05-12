@@ -37,7 +37,6 @@
         };
 
         // Mac用: プロファイル0を選択し、レイヤー0(for_macOS)へ
-
         sel_mac: sel_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -45,7 +44,6 @@
         };
 
         // iPad用: プロファイル1を選択し、レイヤー1(for_iPadOS)へ
-
         sel_ipad: sel_ipad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -53,7 +51,6 @@
         };
 
         // Windows用: プロファイル2を選択し、レイヤー2(for_Windows)へ
-
         sel_win: sel_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -66,7 +63,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -83,7 +79,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DN>;
         };
 
         for_iPadOS {
@@ -93,6 +89,8 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                 &kp B            &lt 7 ESC                    &lt 4 RIGHT_PARENTHESIS  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
+
+            sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DN>;
         };
 
         for_Windows {
@@ -102,6 +100,8 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B            &kp ESC                      &lt 4 RIGHT_PARENTHESIS  &kp N        &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt LEFT_CONTROL MINUS
             >;
+
+            sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DN>;
         };
 
         Function_Symbol {
@@ -130,7 +130,7 @@
 &trans  &trans          &trans          &trans           &trans  &trans      &kp LA(RIGHT_CONTROL)  &kp RET                                             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DN>;
         };
 
         MOUSE {
