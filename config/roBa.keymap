@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-/* エンコーダーを物理的に有効化 (keymapの外に書く必要があります) */
+/* --- 1. ハードウェアの強制有効化（ルートノードの外に記述） --- */
 &left_encoder {
     status = "okay";
 };
@@ -57,7 +57,7 @@
             tapping-term-ms = <200>;
         };
 
-        /* マウススクロールの動作定義 */
+        /* マウススクロール動作を定義 */
         hw_sc: hw_sc {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -77,7 +77,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
 
-            /* エンコーダーにマウススクロールを割り当て */
+            /* 定義した動作をセンサーに紐付け */
             sensor-bindings = <&hw_sc>;
         };
 
