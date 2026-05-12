@@ -3,6 +3,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+/* エンコーダーを物理的に有効化 (keymapの外に書く必要があります) */
+&left_encoder {
+    status = "okay";
+};
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -52,7 +57,7 @@
             tapping-term-ms = <200>;
         };
 
-        /* 修正箇所: #sensor-binding-cells を 0 に変更し、引数を内部で固定 */
+        /* マウススクロールの動作定義 */
         hw_sc: hw_sc {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -72,7 +77,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
 
-            /* 引数なしで呼び出し */
+            /* エンコーダーにマウススクロールを割り当て */
             sensor-bindings = <&hw_sc>;
         };
 
@@ -83,6 +88,8 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                 &kp B            &lt 7 ESC                    &lt 4 RIGHT_PARENTHESIS  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
+
+            sensor-bindings = <&hw_sc>;
         };
 
         for_Windows {
@@ -92,6 +99,8 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                 &kp B            &kp ESC                      &lt 4 RIGHT_PARENTHESIS  &kp N        &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt LEFT_CONTROL MINUS
             >;
+
+            sensor-bindings = <&hw_sc>;
         };
 
         Function_Symbol {
@@ -127,7 +136,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                        &trans    &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB1  &mkp MB2  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans                                &trans
             >;
         };
