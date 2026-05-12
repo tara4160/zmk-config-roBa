@@ -11,18 +11,6 @@
 &trackball {
     automouse-layer = <6>;
     scroll-layers = <7>;
-
-    // arrows {
-    //     layers = <5>;
-    //     bindings =
-    //         <&kp RIGHT_ARROW>,
-    //         <&kp LEFT_ARROW>,
-    //         <&kp UP_ARROW>,
-    //         <&kp DOWN_ARROW>;
-    //     tick = <10>;
-    //     wait-ms = <5>;
-    //     tap-ms = <5>;
-    // };
 };
 
 / {
@@ -36,23 +24,17 @@
             label = "TO_LAYER_0";
         };
 
-        // Mac用: プロファイル0を選択し、レイヤー0(for_macOS)へ
-
         sel_mac: sel_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0 &to 0>;
         };
 
-        // iPad用: プロファイル1を選択し、レイヤー1(for_iPadOS)へ
-
         sel_ipad: sel_ipad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1 &to 1>;
         };
-
-        // Windows用: プロファイル2を選択し、レイヤー2(for_Windows)へ
 
         sel_win: sel_win {
             compatible = "zmk,behavior-macro";
@@ -66,9 +48,16 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        /* マウスホイール用の挙動定義を追加 */
+        hw_sc: hw_sc {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+            tap-ms = <20>;
         };
     };
 
@@ -83,7 +72,8 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
 
-            sensor-bindings = <&inc_dec_msc SCRL_DOWN SCRL_UP>;
+            /* 定義した hw_sc を使用 */
+            sensor-bindings = <&hw_sc SCRL_DOWN SCRL_UP>;
         };
 
         for_iPadOS {
@@ -130,7 +120,7 @@
 &trans  &trans          &trans          &trans           &trans  &trans      &kp LA(RIGHT_CONTROL)  &kp RET                                             &trans
             >;
 
-            sensor-bindings = <&inc_dec_msc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&hw_sc SCRL_DOWN SCRL_UP>;
         };
 
         MOUSE {
