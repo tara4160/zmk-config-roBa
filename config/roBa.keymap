@@ -9,9 +9,11 @@
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
+
 &trackball {
     automouse-layer = <6>;
     scroll-layers = <7>;
+
     // arrows {
     //     layers = <5>;
     //     bindings =
@@ -24,8 +26,10 @@
     //     tap-ms = <5>;
     // };
 };
+
 / {
     combos { compatible = "zmk,combos"; };
+
     macros {
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
@@ -33,43 +37,55 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
         // Mac用: プロファイル0を選択し、レイヤー0(for_macOS)へ
+
         sel_mac: sel_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0 &to 0>;
         };
+
         // iPad用: プロファイル1を選択し、レイヤー1(for_iPadOS)へ
+
         sel_ipad: sel_ipad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1 &to 1>;
         };
+
         // Windows用: プロファイル2を選択し、レイヤー2(for_Windows)へ
+
         sel_win: sel_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 2 &to 2>;
         };
     };
+
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-       encoder_msc_down_up: encoder_msc_down_up {
+
+        encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
+
         for_macOS {
             bindings = <
 &kp Q             &kp W         &kp E             &kp R                 &kp T                                                                  &kp Y        &kp U  &kp I      &kp O    &kp P
@@ -77,8 +93,10 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                 &kp B            &kp ESC                      &lt 4 RIGHT_PARENTHESIS  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
+
             sensor-bindings = <&encoder_msc_down_up>;
         };
+
         for_iPadOS {
             bindings = <
 &kp Q             &kp W         &kp E             &kp R                 &kp T                                                                  &kp Y        &kp U  &kp I      &kp O    &kp P
@@ -86,8 +104,10 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                 &kp B            &lt 7 ESC                    &lt 4 RIGHT_PARENTHESIS  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt RIGHT_COMMAND MINUS
             >;
+
             sensor-bindings = <&encoder_msc_down_up>;
         };
+
         for_Windows {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                 &kp T                                                                  &kp Y        &kp U  &kp I      &kp O    &kp P
@@ -95,16 +115,19 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B            &kp ESC                      &lt 4 RIGHT_PARENTHESIS  &kp N        &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &lt_to_layer_0 5 TAB  &lt 4 BACKSPACE  &lt_to_layer_0 3 DELETE      &lt 8 SPACE              &lt 1 ENTER                             &mt LEFT_CONTROL MINUS
             >;
+
             sensor-bindings = <&encoder_msc_down_up>;
         };
+
         Function_Symbol {
             bindings = <
-&kp EXCL  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                             &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans    &trans       &trans    &trans      &trans       &trans      &trans         &trans     &trans         &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp F1    &kp F2       &kp F3    &kp F4      &kp F5       &kp F6      &kp F7         &kp F8     &kp F9         &kp F10    &kp F11           &kp F12
-&trans    &trans       &trans    &trans      &trans       &trans      &kp LC(SPACE)  &trans                                                 &kp F13
+&kp EXCL  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                             &kp CARET  &kp AMPERSAND  &kp ASTRK             &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans    &trans       &trans    &trans      &trans       &trans      &trans         &trans     &trans         &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp F1    &kp F2       &kp F3    &kp F4      &kp F5       &kp F6      &kp F7         &kp F8     &kp F9         &kp F10               &kp F11           &kp F12
+&trans    &trans       &trans    &trans      &trans       &trans      &kp LC(SPACE)  &trans                                                            &kp F13
             >;
         };
+
         Numbers {
             bindings = <
 &kp PLUS   &kp N7        &kp N8        &kp N9        &trans                                &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
@@ -113,6 +136,7 @@
 &kp SLASH  &kp N0        &trans        &trans        &trans      &trans         &trans     &trans                                                              &trans
             >;
         };
+
         ARROW {
             bindings = <
 &trans  &trans          &kp UP_ARROW    &trans           &trans                                     &trans   &trans    &kp UP_ARROW    &trans           &trans
@@ -120,8 +144,10 @@
 &trans  &trans          &trans          &trans           &trans  &trans      &trans                 &trans   &trans    &trans          &trans           &trans
 &trans  &trans          &trans          &trans           &trans  &trans      &kp LA(RIGHT_CONTROL)  &kp RET                                             &trans
             >;
+
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
+
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                        &trans    &trans    &trans    &trans  &trans
@@ -130,6 +156,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans                                &trans
             >;
         };
+
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
@@ -138,6 +165,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
+
         BT_setting {
             bindings = <
 &trans  &trans  &trans  &trans        &trans                                      &sel_mac  &sel_ipad  &sel_win  &bt BT_SEL 3  &bt BT_SEL 4
