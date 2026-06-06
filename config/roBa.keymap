@@ -119,21 +119,21 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        TENKEY {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                               &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LOCKING_NUM  &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&trans  &trans  &trans  &trans  &trans  &trans      &kp KP_EQUAL     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(SPACE)    &trans                                                              &kp KP_DOT
-            >;
-        };
-
         Symbol_Number_Function {
             bindings = <
 &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                                   &kp CARET          &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans      &kp BACKSLASH     &kp NUMBER_6       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6      &kp F7            &kp F8             &kp F9        &kp F10       &kp F11       &kp F12
 &trans        &trans        &trans        &trans        &trans        &trans      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES                                            &kp F13
+            >;
+        };
+
+        TENKEY {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                               &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LOCKING_NUM  &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans  &trans      &kp KP_EQUAL     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(SPACE)    &trans                                                              &kp KP_DOT
             >;
         };
 
