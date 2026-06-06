@@ -121,10 +121,10 @@
 
         TENKEY {
             bindings = <
-&kp Q   &kp L   &kp U   &kp COMMA  &kp DOT                                       &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK
-&kp E   &kp I   &kp A   &kp O      &kp MINUS  &trans              &trans         &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp Z   &kp X   &kp C   &kp V      &kp SEMI   &kp LEFT_SHIFT      &kp KP_EQUAL   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS
-&trans  &trans  &trans  &trans     &trans     &trans              &kp LC(SPACE)  &trans                                                              &kp KP_DOT
+&trans  &trans  &trans  &trans  &trans                             &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans  &trans      &kp KP_EQUAL   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(SPACE)  &trans                                                              &kp KP_DOT
             >;
         };
 
