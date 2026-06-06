@@ -119,7 +119,7 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        Symbol {
+        OONISHI {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                             &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
 &trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans  &trans            &kp SEMICOLON      &kp SINGLE_QUOTE
