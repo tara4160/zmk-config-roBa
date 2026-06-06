@@ -122,7 +122,7 @@
         OONISHI {
             bindings = <
 &kp Q   &kp L   &kp U   &kp COMMA  &kp DOT                                         &kp J   &kp W  &kp R  &kp Y  &kp P
-&kp E   &kp I   &kp A   &kp O      &kp MINUS  &trans              &trans           &kp K   &kp K  &kp N  &kp S  &kp H
+&kp E   &kp I   &kp A   &kp O      &kp MINUS  &trans              &trans           &kp K   &kp T  &kp N  &kp S  &kp H
 &kp Z   &kp X   &kp C   &kp V      &kp SEMI   &kp LEFT_SHIFT      &kp RIGHT_SHIFT  &kp G   &kp D  &kp M  &kp J  &kp B
 &trans  &trans  &trans  &trans     &trans     &trans              &kp LC(SPACE)    &trans                       &kp FSLH
             >;
