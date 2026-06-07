@@ -28,14 +28,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        Cntl+Space {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <39 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
